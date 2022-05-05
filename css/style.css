@@ -17,6 +17,7 @@ li{
 .style_ul{
     text-align: right;
     padding-right:50px;
+    height: 70px;
 }
 
 a{
@@ -30,6 +31,44 @@ a:hover{
 .imagen-style{
     width:100%;
     height: auto;
+}
+.menu-hamburguer{
+    font-size: 1.8em;
+    float:right;
+    visibility: hidden;
+    margin-top:20px
+}
+.box-imagenes{
+    display:grid;
+    width:90%;
+    margin: 0 auto;
+    grid-template: "display-ducati display-fazer" ;
+}
+.display-ducati{
+    grid-area:display-ducati;
 
+}
 
+.display-fazer{
+    grid-area:display-fazer;
+
+}
+
+.display-pulsar{
+    grid-area:display-pulsar;
+
+}
+
+@media only screen and (max-width: 968px){
+    ul li{
+        visibility:hidden;
+    }
+    .menu-hamburguer{
+        visibility: visible;
+    }
+    .box-imagenes{
+        grid-template: "display-ducati"
+                        "display-fazer" 
+                        "display-pulsar";
+    }
 }
